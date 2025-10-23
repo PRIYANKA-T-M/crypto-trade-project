@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crypto_trade_project.controller.PortfolioController">
+    <children>
+        <Label fx:id="balanceLabel" layoutX="14.0" layoutY="14.0" text="Balance: " />
+        <TableView fx:id="tradesTable" layoutX="14.0" layoutY="40.0" prefHeight="346.0" prefWidth="572.0">
+            <columns>
+                <TableColumn fx:id="cryptoNameColumn" prefWidth="150.0" text="Cryptocurrency" />
+                <TableColumn fx:id="tradeTypeColumn" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+                <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Price" />
+                <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

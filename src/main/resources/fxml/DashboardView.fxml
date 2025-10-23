@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crypto_trade_project.controller.DashboardController">
+    <children>
+        <TabPane layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="772.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Market">
+                    <content>
+                        <fx:include source="MarketView.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Trade">
+                    <content>
+                        <fx:include source="TradeView.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Portfolio">
+                    <content>
+                        <fx:include source="PortfolioView.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

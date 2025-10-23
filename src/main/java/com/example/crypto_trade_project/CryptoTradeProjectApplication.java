@@ -1,13 +1,16 @@
 package com.example.crypto_trade_project;
 
-import org.springframework.boot.SpringApplication;
+import com.example.crypto_trade_project.view.JavaFxApplication;
+import javafx.application.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class CryptoTradeProjectApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CryptoTradeProjectApplication.class, args);
-	}
+    private static String[] savedArgs;
 
+    public static void main(String[] args) {
+        savedArgs = args;
+        Application.launch(JavaFxApplication.class, args);
+    }
 }

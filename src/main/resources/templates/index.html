@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CryptoTrade - Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="navbar">
+    <h1>CryptoTrade</h1>
+    <div class="nav-links">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/market}">Market</a>
+        <a th:href="@{/trade}">Trade</a>
+        <a th:href="@{/portfolio}">Portfolio</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Welcome to CryptoTrade</h2>
+    <p>Your simple crypto trading platform for beginners.</p>
+    <p>Check the market, place trades, and view your portfolio easily.</p>
+    <a th:href="@{/market}" class="btn">View Market</a>
+</div>
+
+<footer>
+    <p>© 2025 CryptoTrade. All rights reserved.</p>
+</footer>
+</body>
+</html>

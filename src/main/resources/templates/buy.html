@@ -6,5 +6,22 @@
 </head>
 <body>
     <h1>Buy Crypto</h1>
+    <form th:action="@{/cart/add}" method="post">
+        <label for="cryptocurrency">Cryptocurrency:</label>
+        <select id="cryptocurrency" name="cryptocurrency">
+            <option th:each="price : ${prices}" th:value="${price.key}" th:text="${price.key} + ' - $' + ${price.value}"></option>
+        </select>
+        <br/>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount"/>
+        <br/>
+        <button type="submit">Add to Cart</button>
+    </form>
+    <br/>
+    <form th:action="@{/buy}" method="post">
+        <input type="hidden" name="cryptocurrency" value="bitcoin"/>
+        <input type="hidden" name="amount" value="1"/>
+        <button type="submit">Buy All from Cart</button>
+    </form>
 </body>
 </html>

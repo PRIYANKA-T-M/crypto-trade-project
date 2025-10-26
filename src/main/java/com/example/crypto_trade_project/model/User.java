@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "users")
+@Table(name = "app_users")
 public class User {
 
     @Id
@@ -23,7 +23,7 @@ public class User {
 
     private String password;
 
-    private BigDecimal balance;
+    private BigDecimal balance = BigDecimal.ZERO;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Trade> trades = new ArrayList<>();

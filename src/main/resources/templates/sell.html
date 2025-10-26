@@ -6,5 +6,16 @@
 </head>
 <body>
     <h1>Sell Crypto</h1>
+    <form th:action="@{/sell}" method="post">
+        <label for="cryptocurrency">Cryptocurrency:</label>
+        <select id="cryptocurrency" name="cryptocurrency">
+            <option th:each="entry : ${portfolio.holdings}" th:value="${entry.key}" th:text="${entry.key} + ' - ' + ${entry.value}"></option>
+        </select>
+        <br/>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount"/>
+        <br/>
+        <button type="submit">Sell</button>
+    </form>
 </body>
 </html>

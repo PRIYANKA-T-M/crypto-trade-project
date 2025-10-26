@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>Portfolio</title>
 </head>
 <body>
-    <h1>Cart</h1>
+    <h1>Portfolio</h1>
     <table border="1">
         <thead>
             <tr>
@@ -14,15 +14,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="entry : ${cart.items}">
+            <tr th:each="entry : ${portfolio.holdings}">
                 <td th:text="${entry.key}"></td>
                 <td th:text="${entry.value}"></td>
             </tr>
         </tbody>
     </table>
-    <br/>
-    <form th:action="@{/buy}" method="post">
-        <button type="submit">Buy All</button>
-    </form>
 </body>
 </html>
